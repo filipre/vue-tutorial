@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <h1>All Tasks: {{ numberOfTasks }}</h1>
+        <ul>
+            <li v-for="task in tasks">
+                <span :class="{'completed': task.completed}">{{ task.description }}</span> <input type="checkbox" :checked="task.completed" @change="toggle(task)">
+            </li>
+        </ul>
+        <button @click="didNothing">I did nothing!</button>
+        <button @click="didEverything">I did everything!</button>
+        <h1>Incomplete Tasks: {{ numberOfIncompleteTasks }}</h1>
+        <ul>
+            <li v-for="task in incompleteTasks">
+                <span :class="{'completed': task.completed}">{{ task.description }}</span> <input type="checkbox" :checked="task.completed" @change="toggle(task)">
+            </li>
+        </ul>
+        <p v-if="done">Well done!</p>
+        <h1>Add a new task</h1>
+        <input v-model="newTask">
+        <button @click="addTask">Add Task</button>
+        <h1>Remove everything</h1>
+        <button @click="removeAllTasks">Remove all Tasks</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#root',
+            data: {
+                newTask: '',
+                tasks: [
+                    { description: 'Open this website', completed: true },
+                    { description: 'Add a new task', completed: false }
+                ]
+            },
+            computed: {
+                numberOfTasks() {
+                    return this.tasks.length;
+                },
+                incompleteTasks() {
+                    return this.tasks.filter(task => ! task.completed);
+                },
+                numberOfIncompleteTasks() {
+                    return this.incompleteTasks.length;
+                },
+                done() {
+                    return this.numberOfIncompleteTasks === 0;
+                }
+            },
+            methods: {
+                toggle(task) {
+                    task.completed = !task.completed;
+                },
+                didNothing() {
+                    this.tasks.forEach(task => task.completed = false);
+                },
+                didEverything() {
+                    this.tasks.forEach(task => task.completed = true);
+                },
+                addTask() {
+                    this.tasks.push({ description: this.newTask, completed: false });
+                    this.newTask = '';
+                },
+                removeAllTasks() {
+                    this.tasks = [];
+                }
+            }
+        });
+    </script>
+</body>
+</html>

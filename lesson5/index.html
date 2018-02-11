@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        .color-red { color: red; }
+    </style>
+</head>
+<body>
+
+    <div id="root">
+        <h1 :class="{ 'color-red': isRed }">Hello World</h1>
+        <p> Headline is red: {{ isRed }}</p>
+        <button @click="toggleColor">Toggle</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el: '#root',
+            data: {
+                isRed: false
+            },
+            methods: {
+                toggleColor() {
+                    this.isRed = !this.isRed;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
