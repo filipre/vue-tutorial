@@ -16,3 +16,7 @@ Hosted at GitHub pages: https://filipre.github.io/vue-tutorial/
 - https://filipre.github.io/vue-tutorial/lesson9/
 - https://filipre.github.io/vue-tutorial/lesson10/
 - https://filipre.github.io/vue-tutorial/lesson11/
+- https://filipre.github.io/vue-tutorial/lesson12/
+- https://filipre.github.io/vue-tutorial/lesson13/
+- https://filipre.github.io/vue-tutorial/lesson14/
+- https://filipre.github.io/vue-tutorial/lesson15/

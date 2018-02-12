@@ -28,7 +28,7 @@ Vue.component('tabs', {
     methods: {
         selectTab(selectedTab) {
             this.tabs.forEach(tab => {
-                tab.isActive = (tab.name === selectedTab.name);
+                tab.isActive = (tab.href === selectedTab.href);
             });
         }
     }
@@ -57,6 +57,10 @@ Vue.component('tab', {
     },
 
     mounted() {
+        if (window.location.hash) {
+            this.isActive = (window.location.hash === this.href);
+            return
+        }
         this.isActive = this.selected;
     }
 });
