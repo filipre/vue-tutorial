@@ -22,3 +22,4 @@ Hosted at GitHub pages: https://filipre.github.io/vue-tutorial/
 - https://filipre.github.io/vue-tutorial/lesson15/
 - https://filipre.github.io/vue-tutorial/lesson16/my-app/
 - https://filipre.github.io/vue-tutorial/lesson17/lesson/
+- https://filipre.github.io/vue-tutorial/lesson18/
