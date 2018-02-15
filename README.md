@@ -23,3 +23,6 @@ Hosted at GitHub pages: https://filipre.github.io/vue-tutorial/
 - https://filipre.github.io/vue-tutorial/lesson16/my-app/
 - https://filipre.github.io/vue-tutorial/lesson17/lesson/
 - https://filipre.github.io/vue-tutorial/lesson18/
+- https://filipre.github.io/vue-tutorial/lesson24/
+- https://filipre.github.io/vue-tutorial/lesson25/
+- https://filipre.github.io/vue-tutorial/lesson26/my-routing/

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>my-routing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
+  </head>
+  <body>
+    <div id="app">
+
+      <section class="hero is-info is-large">
+        <div class="hero-head">
+          <nav class="navbar">
+            <div class="container">
+              <div class="navbar-brand">
+                <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </span>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <router-view></router-view>
+          </div>
+        </div>
+
+        <div class="hero-foot">
+          <nav class="tabs is-boxed is-fullwidth">
+            <div class="container">
+              <ul>
+                <router-link tag="li" to="/" exact>
+                  <a>Home</a>
+                </router-link>
+                <router-link tag="li" to="/about">
+                  <a>About</a>
+                </router-link>
+                <router-link tag="li" to="/other">
+                  <a>Other</a>
+                </router-link>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+    </div>
+    <script src="dist/build.js"></script>
+  </body>
+</html>

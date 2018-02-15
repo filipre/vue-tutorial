@@ -14,7 +14,7 @@
 
 <style>
   .box {
-    background: #e3d3d3;
+    background: #e3e3e3;
     padding: 10px;
     border: 1px solid #c5c5c5;
     margin-bottom: 1em;
